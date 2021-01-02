@@ -3,9 +3,50 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
+	<title>Julian Bull Web Development and Design Portfolio</title>
 <link rel="stylesheet" href="styles.css" type="text/css">
 	<script>
+
+
+
+  function showWhackAMole(){
+    var x = document.getElementById("whackamole");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showPaintApp(){
+    var x = document.getElementById("paintapp");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function showClock(){
+    var x = document.getElementById("clock");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+  function showCalculator(){
+  var x = document.getElementById("calculator");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
 
 	function showCheeseBlog() {
 	  var x = document.getElementById("cheeseblog");
@@ -59,15 +100,13 @@ if (x.style.display === "none") {
 
 </head>
 <body>
-  <h1>Portfolio</h1>
+  <h1>Julian Bull Portfolio</h1>
 
   <div id="buttondiv">
-    <button onclick="showCheeseBlog()">Show Cheese Blog</button>
-    <button onclick="fetchMovieApp()">Show Movie App</button>
-    <button onclick="fetchMovieApp()">Show Movie App</button>
-    <button onclick="showWeatherApp()">Show Weather App</button>
-    <button onclick="showRPG()">Show RPG</button>
-    <button onclick="showSocialNetwork()">Show Social Network</button>
+    <button onclick="showWhackAMole()">Show Whack a Mole</button>
+    <button onclick="showPaintApp()">Show Paint App</button>
+    <button onclick="showClock()">Show Clock</button>
+    <button onclick="showCalculator()">Show Calculator</button>
     <button onclick="showCheeseBlog()">Show Cheese Blog</button>
     <button onclick="fetchMovieApp()">Show Movie App</button>
     <button onclick="fetchMovieApp()">Show Movie App</button>
@@ -76,6 +115,9 @@ if (x.style.display === "none") {
     <button onclick="showSocialNetwork()">Show Social Network</button>
 
   </div>
+
+	<br>
+	<br>
 
 	<div id="gallery">
 
@@ -86,6 +128,23 @@ if (x.style.display === "none") {
 				<div class="galleryitems">
 
 
+
+          <div id="whackamole" style="display:none;">
+            <iframe src="Whack-a-mole/index.html" height="600" width="800" title="Cheese Blog"></iframe>
+            <p>A mern app demonstrating the use of React Hooks and Context Api</p>
+          </div>
+          <div id="clock" style="display:none;">
+            <iframe src="Clock/index.html" height="600" width="800" title="Fetch Movie APp"></iframe>
+            <p>An full stack mern app</p>
+          </div>
+          <div id="paintapp" style="display:none;">
+            <iframe src="Paint/index.html" height="600" width="800" title="Weather App"></iframe>
+            <p>A simple Vanilla Javascript Weather App using the fetch api</p>
+          </div>
+          <div id="calculator" style="display:none;">
+            <iframe src="Calculator/index.html" height="800" width="800" title="RPG"></iframe>
+            <p>A 2d RPG made with phaser JS and asset art taken from Opengameart.org</p>
+          </div>
 
 
 					<div id="cheeseblog" style="display:none;">

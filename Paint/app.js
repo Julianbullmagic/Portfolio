@@ -42,8 +42,8 @@ var pos = { x: 0, y: 0 };
 
 // new position from mouse events
 function setPosition(e) {
-  pos.x = e.clientX;
-  pos.y = e.clientY;
+  pos.x = e.clientX-10;
+  pos.y = e.clientY-35;
 }
 
 function draw(e) {

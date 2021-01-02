@@ -14,7 +14,11 @@ button{
 button:hover {
   transition: 1s ease-in-out;
   background: #4F95DA;
+}
 
+p{
+  color:white;
+  font-size: 2em;
 
 }
 
@@ -31,11 +35,17 @@ display:block;
 display: flex;
  justify-content: center;
 }
+
+.galleryitems{
+  display: flex;
+  justify-content: center;
+}
+
 body{
-  background:url(images/mapped-internet.png) no-repeat center center fixed;
+  background:url(images/mapped-internet.png) no-repeat center center;
 
 
   background-size: cover;
   height: 100%;
-  overflow: hidden;
+
 }
