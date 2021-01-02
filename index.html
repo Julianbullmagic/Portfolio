@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+<link rel="stylesheet" href="styles.css" type="text/css">
+	<script>
+
+	function showCheeseBlog() {
+	  var x = document.getElementById("cheeseblog");
+	  if (x.style.display === "none") {
+	    x.style.display = "block";
+	  } else {
+	    x.style.display = "none";
+	  }
+	}
+
+	function showSocialNetwork() {
+		var x = document.getElementById("democracybook");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+
+	function showRPG() {
+	  var x = document.getElementById("rpggame");
+	  if (x.style.display === "none") {
+	    x.style.display = "block";
+	  } else {
+	    x.style.display = "none";
+	  }
+	}
+
+
+	function showWeatherApp() {
+  var x = document.getElementById("weatherapp");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+function fetchMovieApp() {
+var x = document.getElementById("moviefetchapp");
+if (x.style.display === "none") {
+	x.style.display = "block";
+} else {
+	x.style.display = "none";
+}
+}
+
+
+	</script>
+
+</head>
+<body>
+	<div id="gallery">
+
+	</div>
+	<div id="contents">
+
+				<h1>Portfolio</h1>
+				<div class="galleryitems">
+
+
+					<button class="btn cta" onclick="showCheeseBlog()">Show Cheese Blog</button>
+					<div id="cheeseblog" style="display:none;">
+						<iframe src="https://julianbullmagic.github.io/-Cheese-Blog/" height="600" width="800" title="Cheese Blog"></iframe>
+						<p>A mern app demonstrating the use of React Hooks and Context Api</p>
+					</div>
+					<button onclick="fetchMovieApp()">Show Movie App</button>
+					<div id="moviefetchapp" style="display:none;">
+						<iframe src="	https://movie-fetch-app.herokuapp.com/" height="600" width="800" title="Fetch Movie APp"></iframe>
+						<p>An full stack mern app</p>
+					</div>
+					<button onclick="showWeatherApp()">Show Weather App</button>
+					<div id="weatherapp" style="display:none;">
+						<iframe src="Vannila_JS_Weather_App/index.html" height="600" width="800" title="Weather App"></iframe>
+						<p>A simple Vanilla Javascript Weather App using the fetch api</p>
+					</div>
+					<button onclick="showRPG()">Show RPG</button>
+					<div id="rpggame" style="display:none;">
+						<iframe src="https://julianbullmagic.github.io/RPG/" height="600" width="800" title="RPG"></iframe>
+						<p>A 2d RPG made with phaser JS and asset art taken from Opengameart.org</p>
+					</div>
+						<button onclick="showSocialNetwork()">Show Social Network</button>
+					<div id="democracybook" style="display:none;">
+						<iframe src="https://democracybook.herokuapp.com/" height="600" width="800" title="Democracy Book"></iframe>
+						<p>A Mern Stack Social Network</p>
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+	</div>
+</body>
+</html>
