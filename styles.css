@@ -1,16 +1,41 @@
 button{
   width: 180px;
  height: 60px;
+ color:white;
  cursor: pointer;
  background: transparent;
  border: 1px solid #91C9FF;
  outline: none;
  transition: 1s ease-in-out;
+
+
+
 }
 button:hover {
   transition: 1s ease-in-out;
   background: #4F95DA;
+
+
 }
+
 h1{
   color:#91C9FF;
+  display:block;
+   font-size: 5em;
+   display: flex;
+    justify-content: center;
+ }
+
+#buttondiv{
+display:block;
+display: flex;
+ justify-content: center;
+}
+body{
+  background:url(images/mapped-internet.png) no-repeat center center fixed;
+
+
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }

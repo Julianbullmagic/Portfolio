@@ -1,0 +1,63 @@
+body{
+    font-family:sans-serif;
+    padding: 30px;
+    background:#ededed;
+}
+
+.wrapper{
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+.blue {
+    color:#3f7abe;
+}
+
+h1{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #08a3d9;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #000380;
+    display:flex;
+    justify-content: center;
+}
+h2{
+  display:flex;
+  justify-content: center;
+}
+#balloon-gallery{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+#balloon-gallery div{
+  width:45px;
+  height:50px;
+  background: url('coin-sprite-animation-sprite-sheet.png') 0 0 no-repeat;
+	-webkit-animation: walker 1s steps(10) infinite;
+    color: #ff3300;
+    font-size: 20px;
+    font-family: sans-serif, arial;
+
+}
+#fail{
+  color:#ff3300;
+  font-size:50px;
+    display:none;
+}
+
+
+ @-webkit-keyframes walker {
+   from {background-position:0 0;}
+   to {background-position:-440px, 0;}
+ }
+
+
+#yay-no-balloons {
+    display:none;
+    color:#ff3300;
+    font-size:50px;
+}

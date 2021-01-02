@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Julian</title>
+</head>
+<style>
+body{
+	font-family:Tahoma;
+	text-align: center;
+}
+#img {
+  width: 876px;
+  height: 644px;
+  margin: 2% auto;
+  background: url('Angryfacesprites.png');
+}
+.info{
+	color: #aaa;
+}
+p{
+	color:black;
+	margin:10px;
+	padding:5px;
+}
+h1{
+	color:white;
+	padding:10px;
+	margin:5px;
+	shadow:5px;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+#box{
+	display:flex;
+	justify-content: left;
+}
+#ask{
+	margin:10px;
+	padding:5px;
+}
+#askBtn{
+	margin:10px;
+	padding:5px;
+}
+</style>
+<body>
+<div id="img" onmousemove="start(event)">
+	<div id="box">
+	<br>
+		<h1>Virtual Julian</h1>
+		<br>
+	<input id="ask" placeholder="ask me anything"></input>
+<button id="askBtn">say something</button>
+<p id="response"></p>
+</div>
+</div>
+<div>
+<br>
+</div>
+<script>
+	var img = document.getElementById('img');
+	function start(event) {
+	var pos  =(1715/(event.clientX+110)).toFixed(0);
+	var val = 876*pos;
+	img.style.backgroundPosition = val+'px';
+	}
+	(function() {
+	  const quotes = [
+	    {
+	      quote:
+	        "leave me alone",
+	    },
+	    {
+	      quote:
+	        "what do you want?!",
+	    },
+	    {
+	      quote:
+	        "who do you think you are?"
+	    },
+	    {
+	      quote: "why would you think I care what you think?"
+	    },
+	    {
+	      quote:
+	        "why are we still talking?"
+	    },
+	    {
+	      quote:
+	        "I will destroy you",
+	    },
+			{
+	      quote:
+	        "you think you're better than me don't you?",
+	    },
+			{
+	      quote:
+	        "I'll kill you",
+	    },
+
+			{
+	      quote:
+	        "what a stupid question",
+	    },
+			{
+	      quote:
+	        "you will never be on my level, I'm the best",
+	    },
+			{
+	      quote:
+	        "don't tell me what to do",
+	    },
+			{
+	      quote:
+	        "I dont care",
+	    },
+			{
+	      quote:
+	        "shut your pie hole",
+	    },
+			{
+	      quote:
+	        "nobody will ever love you",
+	    }
+	  ];
+
+	  const btn = document.getElementById("askBtn");
+
+	  btn.addEventListener("click", function() {
+	    let random = Math.floor(Math.random() * quotes.length);
+
+
+	    document.getElementById("response").innerText = quotes[random].quote;
+	    document.getElementById("ask").value="";
+
+	  });
+	})();
+
+</script>
+</body>
+</html>
