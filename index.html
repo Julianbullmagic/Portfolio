@@ -37,25 +37,6 @@
     }
   }
 
-  function showClock(){
-    var x = document.getElementById("clock");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-
-  function showCalculator(){
-  var x = document.getElementById("calculator");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
 
 
 	function showCheeseBlog() {
@@ -130,10 +111,6 @@ if (x.style.display === "none") {
   <h1>Julian Bull Portfolio</h1>
 
   <div id="buttondiv">
-    <button onclick="showWhackAMole()">Show Whack a Mole</button>
-    <button onclick="showPaintApp()">Show Paint App</button>
-    <button onclick="showClock()">Show Clock</button>
-    <button onclick="showCalculator()">Show Calculator</button>
 		<button onclick="showChatApp()">Show Chat App</button>
 		<button onclick="showContacts()">Show Phonebook</button>
     <button onclick="showCheeseBlog()">Show Cheese Blog</button>
@@ -141,7 +118,10 @@ if (x.style.display === "none") {
     <button onclick="fetchMovieApp()">Show Movie App</button>
     <button onclick="showWeatherApp()">Show Weather App</button>
     <button onclick="showRPG()">Show RPG</button>
+		<button onclick="showWhackAMole()">Show Whack a Mole</button>
     <button onclick="showSocialNetwork()">Show Social Network</button>
+		<button onclick="showPaintApp()">Show Paint App</button>
+
 
   </div>
 
@@ -163,44 +143,37 @@ if (x.style.display === "none") {
 
             <iframe src="Whack-a-mole/index.html" height="600" width="800" title="Cheese Blog"></iframe>
           </div>
-          <div id="clock" style="display:none;">
-						<p>An full stack mern app</p>
-            <iframe src="Clock/index.html" height="600" width="800" title="Fetch Movie APp"></iframe>
-          </div>
+
           <div id="paintapp" style="display:none;">
 						<p>A simple Vanilla Javascript Weather App using the fetch api</p>
 
             <iframe src="Paint/index.html" height="600" width="800" title="Weather App"></iframe>
           </div>
-          <div id="calculator" style="display:none;">
-						<p>A Calculator</p>
 
-            <iframe src="Calculator/index.html" height="800" width="800" title="RPG"></iframe>
-          </div>
 
 
 
 					<div id="chat" style="display:none;">
-						<p>A Mern stack chat application using socket io</p>
+						<p>A Mern stack chat application using socket io https://chat-online-with-friends.herokuapp.com/</p>
 
 						<iframe src="https://chat-online-with-friends.herokuapp.com/" height="800" width="800" title="Phonebook"></iframe>
 					</div>
 					<div id="contacts" style="display:none;">
-						<p>A Mern stack phonebook application</p>
+						<p>A Mern stack phonebook application https://julian-phonebook.herokuapp.com/</p>
 
 						<iframe src="https://julian-phonebook.herokuapp.com/" height="800" width="800" title="Phonebook"></iframe>
 					</div>
 					<div id="cheeseblog" style="display:none;">
-						<p>A mern app demonstrating the use of React Hooks and Context Api</p>
+						<p>A mern app demonstrating the use of React Hooks and Context Api https://cheese-blog.herokuapp.com/</p>
 						<iframe src="https://cheese-blog.herokuapp.com/" height="600" width="800" title="Cheese Blog"></iframe>
 					</div>
 					<div id="ecommerce" style="display:none;">
-						<p>A Mern Stack Ecommerce Application</p>
+						<p>A Mern Stack Ecommerce Application https://julian-online-shop.herokuapp.com/</p>
 						<iframe src="https://julian-online-shop.herokuapp.com/" height="600" width="800" title="Democracy Book"></iframe>
 					</div>
 					<div id="moviefetchapp" style="display:none;">
-						<p>An full stack mern app</p>
-						<iframe src="	https://movie-fetch-app.herokuapp.com/" height="600" width="800" title="Fetch Movie APp"></iframe>
+						<p>An full stack mern app https://movie-fetch-app.herokuapp.com/</p>
+						<iframe src="https://movie-fetch-app.herokuapp.com/" height="600" width="800" title="Fetch Movie APp"></iframe>
 					</div>
 					<div id="weatherapp" style="display:none;">
 						<p>A simple Vanilla Javascript Weather App using the fetch api</p>
@@ -211,7 +184,7 @@ if (x.style.display === "none") {
 						<iframe src="https://julianbullmagic.github.io/RPG/" height="600" width="800" title="RPG"></iframe>
 					</div>
 					<div id="democracybook" style="display:none;">
-						<p>A Mern Stack Social Network</p>
+						<p>A Mern Stack Social Network https://democracybook.herokuapp.com/</p>
 						<iframe src="https://democracybook.herokuapp.com/" height="600" width="800" title="Democracy Book"></iframe>
 					</div>
 
