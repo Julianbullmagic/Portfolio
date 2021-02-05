@@ -7,109 +7,19 @@
 <link rel="stylesheet" href="styles.css" type="text/css">
 	<script>
 
-	function showDestinationsApp(){
-    var x = document.getElementById("destinations");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-  function showWhackAMole(){
-    var x = document.getElementById("whackamole");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-	function showContacts(){
-		var x = document.getElementById("contacts");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-
-
-  function showPaintApp(){
-    var x = document.getElementById("paintapp");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-
-
-	function showCheeseBlog() {
-	  var x = document.getElementById("cheeseblog");
-	  if (x.style.display === "none") {
-	    x.style.display = "block";
-	  } else {
-	    x.style.display = "none";
+	function openApp(evt, appName) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
 	  }
-	}
-
-	function showSocialNetwork() {
-		var x = document.getElementById("democracybook");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-
-	function showRPG() {
-	  var x = document.getElementById("rpggame");
-	  if (x.style.display === "none") {
-	    x.style.display = "block";
-	  } else {
-	    x.style.display = "none";
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+	    tablinks[i].className = tablinks[i].className.replace(" active", "");
 	  }
+	  document.getElementById(appName).style.display = "block";
+	  evt.currentTarget.className += " active";
 	}
-
-
-	function showWeatherApp() {
-  var x = document.getElementById("weatherapp");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
-function fetchMovieApp() {
-var x = document.getElementById("moviefetchapp");
-if (x.style.display === "none") {
-	x.style.display = "block";
-} else {
-	x.style.display = "none";
-}
-}
-
-function showEcommerceApp() {
-var x = document.getElementById("ecommerce");
-if (x.style.display === "none") {
-	x.style.display = "block";
-} else {
-	x.style.display = "none";
-}
-}
-function showChatApp() {
-var x = document.getElementById("chat");
-if (x.style.display === "none") {
-	x.style.display = "block";
-} else {
-	x.style.display = "none";
-}
-}
-
 
 	</script>
 
@@ -117,84 +27,75 @@ if (x.style.display === "none") {
 <body>
   <h1>Julian Bull Portfolio</h1>
 
+
+
+
   <div id="buttondiv">
-		<button onclick="showDestinationsApp()">Show Destinations App</button>
-		<button onclick="showChatApp()">Show Chat App</button>
-		<button onclick="showContacts()">Show Phonebook</button>
-    <button onclick="showCheeseBlog()">Show Cheese Blog</button>
-		<button onclick="showEcommerceApp()">Show Ecommerce App</button>
-    <button onclick="fetchMovieApp()">Show Movie App</button>
-    <button onclick="showWeatherApp()">Show Weather App</button>
-    <button onclick="showRPG()">Show RPG</button>
-		<button onclick="showWhackAMole()">Show Whack a Mole</button>
-    <button onclick="showSocialNetwork()">Show Social Network</button>
-		<button onclick="showPaintApp()">Show Paint App</button>
-
-
+		<button class="tablinks" onclick="openApp(event, 'destinations')">Destinations App</button>
+		<button class="tablinks" onclick="openApp(event, 'whackamole')">Whack a Mole</button>
+		<button class="tablinks" onclick="openApp(event, 'paintapp')">Paint Application</button>
+    <button class="tablinks" onclick="openApp(event, 'chat')">Chat App</button>
+		<button class="tablinks" onclick="openApp(event, 'contacts')">Contact Keeper</button>
+    <button class="tablinks" onclick="openApp(event, 'cheeseblog')">Cheese Blog</button>
+    <button class="tablinks" onclick="openApp(event, 'ecommerce')">Ecommerce</button>
+    <button class="tablinks" onclick="openApp(event, 'moviefetchapp')">Movie App</button>
+		<button class="tablinks" onclick="openApp(event, 'weatherapp')">Weather App</button>
+    <button class="tablinks" onclick="openApp(event, 'rpggame')">Rpg Game</button>
+		<button class="tablinks" onclick="openApp(event, 'democracybook')">Social Network</button>
   </div>
-
 	<br>
 	<br>
-
-	<div id="gallery">
-
-	</div>
 	<div id="contents">
-
-
-				<div class="galleryitems">
-
-
-
-<div id="destinations" style="display:none;">
+	<div class="galleryitems">
+<div id="destinations" class="tabcontent" style="display:none;">
 	<p>A MEAN stack chat application uses a geocoding rest api to find coordinates and leaflet to show maps https://destinations-application.herokuapp.com/</p>
 
 	<iframe src="https://destinations-application.herokuapp.com/" height="800" width="800" title="Phonebook"></iframe>
 </div>
 
-          <div id="whackamole" style="display:none;">
+          <div id="whackamole" class="tabcontent" style="display:none;">
 						<p>A mern app demonstrating the use of React Hooks and Context Api</p>
 
             <iframe src="Whack-a-mole/index.html" height="600" width="800" title="Cheese Blog"></iframe>
           </div>
 
-          <div id="paintapp" style="display:none;">
+          <div id="paintapp" class="tabcontent" style="display:none;">
 						<p>A simple Vanilla Javascript Weather App using the fetch api</p>
 
             <iframe src="Paint/index.html" height="600" width="800" title="Weather App"></iframe>
           </div>
 
-					<div id="chat" style="display:none;">
+					<div id="chat" class="tabcontent" style="display:none;">
 						<p>A Mern stack chat application using socket io https://chat-online-with-friends.herokuapp.com/</p>
 
 						<iframe src="https://chat-online-with-friends.herokuapp.com/" height="800" width="800" title="Phonebook"></iframe>
 					</div>
-					<div id="contacts" style="display:none;">
+					<div id="contacts" class="tabcontent" style="display:none;">
 						<p>A Mern stack phonebook application https://julian-phonebook.herokuapp.com/</p>
 
 						<iframe src="https://julian-phonebook.herokuapp.com/" height="800" width="800" title="Phonebook"></iframe>
 					</div>
-					<div id="cheeseblog" style="display:none;">
+					<div id="cheeseblog" class="tabcontent" style="display:none;">
 						<p>A mern app demonstrating the use of React Hooks and Context Api https://cheese-blog.herokuapp.com/</p>
 						<iframe src="https://cheese-blog.herokuapp.com/" height="600" width="800" title="Cheese Blog"></iframe>
 					</div>
-					<div id="ecommerce" style="display:none;">
+					<div id="ecommerce" class="tabcontent" style="display:none;">
 						<p>A Mern Stack Ecommerce Application https://julian-online-shop.herokuapp.com/</p>
 						<iframe src="https://julian-online-shop.herokuapp.com/" height="600" width="800" title="Democracy Book"></iframe>
 					</div>
-					<div id="moviefetchapp" style="display:none;">
+					<div id="moviefetchapp" class="tabcontent" style="display:none;">
 						<p>An full stack mern app https://movie-fetch-app.herokuapp.com/</p>
 						<iframe src="https://movie-fetch-app.herokuapp.com/" height="600" width="800" title="Fetch Movie APp"></iframe>
 					</div>
-					<div id="weatherapp" style="display:none;">
+					<div id="weatherapp" class="tabcontent" style="display:none;">
 						<p>A simple Vanilla Javascript Weather App using the fetch api</p>
 						<iframe src="Vannila_JS_Weather_App/index.html" height="600" width="800" title="Weather App"></iframe>
 					</div>
-					<div id="rpggame" style="display:none;">
+					<div id="rpggame" class="tabcontent" style="display:none;">
 						<p>A 2d RPG made with phaser JS and asset art taken from Opengameart.org. Use arrow keys to move, shift to jump and space to swing </p>
 						<iframe src="https://julianbullmagic.github.io/RPG/" height="600" width="800" title="RPG"></iframe>
 					</div>
-					<div id="democracybook" style="display:none;">
+					<div id="democracybook" class="tabcontent" style="display:none;">
 						<p>A Mern Stack Social Network https://democracybook.herokuapp.com/</p>
 						<iframe src="https://democracybook.herokuapp.com/" height="600" width="800" title="Democracy Book"></iframe>
 					</div>
